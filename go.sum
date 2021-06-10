@@ -3,6 +3,8 @@ github.com/alvaro259818/bookstore-oauth-go v1.0.0/go.mod h1:38RBcqF6GKF0mYDPvgdA
 github.com/alvaro259818/bookstore-utils-go v0.0.0-20210610161924-b1a30bce2cf3/go.mod h1:z4I3DSXUEeueT+wIDy0vmSg+MyPfmviULZo5HSj0RLM=
 github.com/alvaro259818/bookstore-utils-go v1.0.0 h1:T2Wa89LN4xv3LwpFvbKh8OeIUPI0xBI3/gqNcBsBGKI=
 github.com/alvaro259818/bookstore-utils-go v1.0.0/go.mod h1:z4I3DSXUEeueT+wIDy0vmSg+MyPfmviULZo5HSj0RLM=
+github.com/alvaro259818/bookstore-utils-go v1.0.1 h1:Ff2hEdxoGA9/qqKWhDragnV6qEUL89kNhBaTZm1UEFo=
+github.com/alvaro259818/bookstore-utils-go v1.0.1/go.mod h1:z4I3DSXUEeueT+wIDy0vmSg+MyPfmviULZo5HSj0RLM=
 github.com/alvaro259818/golang-restclient v0.0.0-20210604225239-3c4065da3214 h1:FGuNPgolsfIlHjjq2j8oXbdqmDCMBDEPKS2P/gOt95o=
 github.com/alvaro259818/golang-restclient v0.0.0-20210604225239-3c4065da3214/go.mod h1:IUDFdSr64zviqIxavpWj+2Boy2whNtLn0ht+eOfCK2o=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
