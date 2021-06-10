@@ -1,11 +1,11 @@
 package users
 
 import (
-	"fmt"
 	"errors"
+	"fmt"
+	"github.com/alvaro259818/bookstore-utils-go/logger"
 	"github.com/alvaro259818/bookstore-utils-go/rest_errors"
 	"github.com/alvaro259818/bookstore_users-api/datasources/mysql/users_db"
-	"github.com/alvaro259818/bookstore_users-api/logger"
 	"github.com/alvaro259818/bookstore_users-api/utils/mysql_utils"
 	"strings"
 )
@@ -19,7 +19,7 @@ const (
 	queryFindByEmailAndPassword = "SELECT id, first_name, last_name, email, date_created, status FROM users WHERE email=? AND password=? AND status=?"
 )
 
-func (user *User) Get() *rest_errors.RestError {
+func (user *User) Get() rest_errors.RestError {
 	stmt, err := users_db.Client.Prepare(queryGetUser)
 	if err != nil {
 		logger.Error("error where trying to prepare get user statement", err)
@@ -34,7 +34,7 @@ func (user *User) Get() *rest_errors.RestError {
 	return nil
 }
 
-func (user *User) Save() *rest_errors.RestError {
+func (user *User) Save() rest_errors.RestError {
 	stmt, err := users_db.Client.Prepare(queryInsertUser)
 	if err != nil {
 		logger.Error("error where trying to prepare save user statement", err)
@@ -56,7 +56,7 @@ func (user *User) Save() *rest_errors.RestError {
 	return nil
 }
 
-func (user *User) Update() *rest_errors.RestError {
+func (user *User) Update() rest_errors.RestError {
 	stmt, err := users_db.Client.Prepare(queryUpdateUser)
 	if err != nil {
 		logger.Error("error where trying to prepare update user statement", err)
@@ -71,7 +71,7 @@ func (user *User) Update() *rest_errors.RestError {
 	return nil
 }
 
-func (user User) Delete() *rest_errors.RestError {
+func (user User) Delete() rest_errors.RestError {
 	stmt, err := users_db.Client.Prepare(queryDeleteUser)
 	if err != nil {
 		logger.Error("error where trying to prepare delete user statement", err)
@@ -86,7 +86,7 @@ func (user User) Delete() *rest_errors.RestError {
 	return nil
 }
 
-func (user User) FindByStatus(status string) ([]User, *rest_errors.RestError) {
+func (user User) FindByStatus(status string) ([]User, rest_errors.RestError) {
 	stmt, err := users_db.Client.Prepare(queryFindByStatus)
 	if err != nil {
 		logger.Error("error where trying to prepare find users by status statement", err)
@@ -116,7 +116,7 @@ func (user User) FindByStatus(status string) ([]User, *rest_errors.RestError) {
 	return results, nil
 }
 
-func (user *User) FindByEmailAndPassword() *rest_errors.RestError {
+func (user *User) FindByEmailAndPassword() rest_errors.RestError {
 	stmt, err := users_db.Client.Prepare(queryFindByEmailAndPassword)
 	if err != nil {
 		logger.Error("error where trying to prepare get user by email and password statement", err)
